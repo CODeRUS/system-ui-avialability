@@ -1,0 +1,17 @@
+#!/bin/sh
+
+restore_applet()
+{
+    template_path="/usr/share/meegotouch/applicationextensions/statusindicatormenu-${1}.desktop"
+    template_data="[Desktop Entry]\nType=X-MeeGoApplicationExtension\nName=Status Indicator Menu Applet\n\n[X-MeeGoApplicationExtension]\nInterface=com.meego.core.MStatusIndicatorMenuExtensionInterface/1.0\nExtension=libstatusindicatormenu-${1}.so"
+    echo -e $template_data > $template_path
+}
+
+set +e
+
+if [ "$1" == "remove" ]; then
+    /sbin/initctl stop xsession/sysuid
+    restore_applet presence
+fi
+
+exit 0

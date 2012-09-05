@@ -1,0 +1,14 @@
+Source: system-ui-avialability
+Section: user/other
+Priority: optional
+Maintainer: CODeRUS <coderusinbox@gmail.com>
+Build-Depends: debhelper (>= 5), libqt4-dev
+Standards-Version: 3.7.3
+Homepage: <insert the upstream URL, if relevant>
+
+Package: system-ui-avialability
+Architecture: armel
+Depends: system-ui
+Description: Status menu avialability widgets extension
+  Replaces built-in presence applet.
+XSBC-Maemo-Display-Name: Status menu avialability widgets extension | CODeRUS

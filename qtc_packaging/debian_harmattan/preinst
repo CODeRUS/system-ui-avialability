@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set +e
+
+if [ "$1" == "install" ] || [ "$1" == "upgrade" ]; then
+    /sbin/initctl stop xsession/sysuid
+fi
+
+exit 0
